@@ -9,6 +9,7 @@ public class Fields {
     public int a;
 
     public int b;
+    public int[] numbers;
 
     public Operation op;
 
@@ -28,6 +29,12 @@ public class Fields {
 
     public void setB(int b) {
         this.b = b;
+    }
+    public int[] getNumbers(){
+        return numbers;
+    }
+    public void setNumbers(int[] numbers){
+        this.numbers = numbers;
     }
 
     public Operation getOp() {

@@ -15,6 +15,8 @@ public class Main {
         float rc = 0;
         if (field.getOp() == Fields.Operation.ADD) {
             rc = BasicMathOperations.add(field.getA(), field.getB());
+        } else if (field.getOp() == Fields.Operation.SUM) {
+            rc = BasicMathOperations.sum(field.getNumbers());
         }
 
         System.out.println("Result: " + rc);
@@ -25,13 +27,23 @@ public class Main {
         String[] strings = line.split(" ");
 
         if (strings.length < 3) {
-            fields.setError("Not enough parameter, expected 3, received: " + strings.length);
+            fields.setError("Not enough parameters, expected 3 or more, received: " + strings.length);
             return fields;
         }
 
         fields.setOp(Fields.Operation.valueOf(strings[0]));
-        fields.setA(Integer.parseInt(strings[1]));
-        fields.setB(Integer.parseInt(strings[2]));
+        if (fields.getOp() == Fields.Operation.SUM) {
+            int[] numbers = new int[strings.length - 1];
+            for (int i = 1; i < strings.length; i++) {
+                numbers[i - 1] = Integer.parseInt(strings[i]);
+            }
+            fields.setNumbers(numbers);
+        } else {
+            fields.setA(Integer.parseInt(strings[1]));
+            fields.setB(Integer.parseInt(strings[2]));
+        }
         return fields;
     }
+
+
 }

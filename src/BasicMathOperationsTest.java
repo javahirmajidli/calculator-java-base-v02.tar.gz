@@ -10,8 +10,18 @@ public class BasicMathOperationsTest {
     }
 
     @Test
-    public void testStub() {
+    public void testSub() {
         Assert.assertEquals(-1, BasicMathOperations.sub(0, 1));
         Assert.assertEquals(0, BasicMathOperations.sub(-1, -1));
+    }
+//    @Test
+//    public void testDiv() {
+//        Assert.assertEquals(-1, BasicMathOperations.sub(0, 1));
+//        Assert.assertEquals(0, BasicMathOperations.sub(-1, -1));
+//    }
+    @Test
+    public void testMul() {
+        Assert.assertEquals(-0, BasicMathOperations.sub(0, 1));
+        Assert.assertEquals(1, BasicMathOperations.sub(-1, -1));
     }
 }

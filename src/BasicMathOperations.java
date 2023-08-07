@@ -8,10 +8,22 @@ public class BasicMathOperations {
     }
 
     public static float div(int a, int b) {
-        return a / b;
+        if(b!=0){
+            return (float) a / b ;
+        }else {
+            throw new IllegalArgumentException("Cannot divide by zero");
+        }
     }
 
     public static int mul(int a, int b) {
-        return a * b * -1;
+        return a * b ;
+    }
+
+    public static int sum(int[] numbers){
+        int sum = 0;
+        for(int num : numbers){
+            sum+=num;
+        }
+        return sum;
     }
 }
