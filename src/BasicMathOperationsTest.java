@@ -16,12 +16,12 @@ public class BasicMathOperationsTest {
     }
     @Test
     public void testDiv() {
-        Assert.assertEquals(0, BasicMathOperations.sub(0, 1));
-        Assert.assertEquals(1, BasicMathOperations.sub(-1, -1));
+        Assert.assertEquals(0, BasicMathOperations.div(0, 1));
+        Assert.assertEquals(1, BasicMathOperations.div(-1, -1));
     }
     @Test
     public void testMul() {
-        Assert.assertEquals(0, BasicMathOperations.sub(0, 1));
-        Assert.assertEquals(1, BasicMathOperations.sub(-1, -1));
+        Assert.assertEquals(0, BasicMathOperations.mul(0, 1));
+        Assert.assertEquals(1, BasicMathOperations.mul(-1, -1));
     }
 }
